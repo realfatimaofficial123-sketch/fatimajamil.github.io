@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FATIMA JAMIL | Portfolio</title>
+<link rel="stylesheet" href="styleportfolio.css">
+        <link rel="stylesheet" href="portfolio1.html">
+        <link rel="stylesheet" href="portfolio22.html">
+            <link rel="stylesheet" href="portfolio3.html">
+                <link rel="stylesheet" href="portfolio4.html">
+                    <link rel="stylesheet" href="portfolio5.html">
+    
+
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1e1e2f;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #4b59f7;
+}
+
+/* CV Button */
+.cv-btn {
+    background-color: #fff;
+    color: #1e1e2f;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cv-btn:hover {
+    background-color: #4b59f7;
+    color: #fff;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(30,30,47,0.8), rgba(30,30,47,0.8)),
+    url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+     color: #31c8ff;
+}
+
+.btn {
+    background-color: #4b59f7;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Portfolio */
+.portfolio {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.project-card {
+    width: 350px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slider-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.slider-buttons button {
+    background: #4b59f7;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 10px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.lightbox .prev, .lightbox .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #4b59f7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.lightbox .prev { left: 20px; }
+.lightbox .next { right: 20px; }
+
+/* About Me Section */
+.about-me {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-me h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.about-me p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Skills Section */
+.skills {
+    background-color: #e8e8f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #1e1e2f;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill {
+    background-color: #4b59f7;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Video Section */
+.videos {
+  
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+.videos h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #1e1e2f;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.video-card video {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.video-card p {
+    margin-top: 40px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e2f;
+    color: #fff;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Port<span>Folio</span></div>
+         <ul class="nav-links">
+                <li><a href="portfolio1.html">Home</a></li>
+                <li><a href="portfolio22.html">About</a></li>
+                <li><a href="portfolio3.html">Skills</a></li>
+                <li><a href="portfolio4.html">Portfolio</a></li>
+                <li><a href="portfolio5.html">Contact</a></li>
+            </ul>
+
+        <a href="FATIMA JAMIL CV.pdf" class="cv-btn">Download CV</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hello, I'm Fatima Jamil</h1>
+        <p> UI/UX Designer | Graphic Designer | Frontend Developer </p><br><br>
+        <a href="contact.html" class="btn">Hire Me</a>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio">
+    <h2>My Projects</h2>
+
+    <div class="project-card">
+        <div class="slider">
+             <img src="homepage.jpg" class="slide" alt="Brochure Design" onclick="openLightbox(0)">
+             <img src="tri part brocheur.jpg" class="slide" alt="Brochure Design" onclick="openLightbox(1)">
+             <img src="IQBQL DAY POSTER.jpg" class="slide active" alt="Poster Design" onclick="openLightbox(2)">
+             <img src="homepage.jpg" class="slide" alt="Brochure Design" onclick="openLightbox(3)">
+             <img src="coffe.jpg" class="slide" alt="Brochure Design" onclick="openLightbox(4)">
+             <img src="cofee poster.png" class="slide" alt="Brochure Design" onclick="openLightbox(5)">
+             <img src="sustainable.jpg" class="slide" alt="Brochure Design" onclick="openLightbox(6)">
+             <img src="green card.jpg" class="slide" alt="Brochure Design" onclick="openLightbox(7)">
+             <img src="music brand.jpg" class="slide" alt="Brochure Design" onclick="openLightbox(8)">
+             <img src="Untitled-1.jpg" class="slide" alt="Brochure Design" onclick="openLightbox(9)">
+             <img src="SELF LOGOS.jpg" class="slide" alt="Logo Design" onclick="openLightbox(10)">
+             <img src="FOOD MENU.jpg" class="slide" alt="Brochure Design" onclick="openLightbox(11)">
+             <img src="travel AGency.jpg" class="slide" alt="Brochure Design" onclick="openLightbox(12)">
+             <img src="tecj.jpg" class="slide" alt="Brochure Design" onclick="openLightbox(13)">
+             <img src="logo 3 corel.jpg" class="slide" alt="Brochure Design" onclick="openLightbox(14)">
+        </div>
+        <div class="slider-buttons">
+            <button onclick="prevSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
+        </div>
+        <h3>Graphic Design Project</h3>
+        <p>Posters, logos, and brochure designs in one project.</p>
+    </div>
+</section>
+
+<!-- Video Section -->
+<section class="videos">
+    <h2>My Videos</h2>
+            <p>My Projects</p>
+        </div>
+        <div class="video-card">
+            <video width="300" controls>
+                <source src="202602282043.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+</section>
+
+<!-- Fullscreen Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="">
+    <button class="prev" onclick="prevLightbox()">❮</button>
+    <button class="next" onclick="nextLightbox()">❯</button>
+</div>
+
+<!-- About Me Section -->
+<section class="about-me">
+    <!-- <h2>About Me</h2>
+    <p>
+        I'm Fatima Jamil, a passionate frontend developer and UI/UX designer. I have experience in Web Development,
+        Graphic Designing, and other creative solutions. I aim to create user-friendly and visually
+        appealing websites and designs.
+    </p> -->
+</section>
+
+<!-- Skills Section -->
+<!-- 
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Fatima Jamil. All rights reserved.</p>
+</footer>
+
+<!-- <script>
+// Slider
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+
+function showSlide(index){
+    slides.forEach(s => s.classList.remove('active'));
+    slides[index].classList.add('active');
+    current = index;
+}
+
+function nextSlide(){ showSlide((current +1)%slides.length); }
+function prevSlide(){ showSlide((current -1 + slides.length)%slides.length); }
+
+// Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+function openLightbox(index){
+    lightbox.style.display = 'flex';
+    lightboxImg.src = slides[index].src;
+    current = index;
+}
+
+function closeLightbox(){ lightbox.style.display='none'; }
+function nextLightbox(){ current=(current+1)%slides.length; lightboxImg.src=slides[current].src; }
+function prevLightbox(){ current=(current-1+slides.length)%slides.length; lightboxImg.src=slides[current].src; }
+
+// Swipe for lightbox
+let startX = 0;
+lightbox.addEventListener('touchstart', e => startX=e.touches[0].clientX);
+lightbox.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+    if(endX - startX > 50) prevLightbox();
+    else if(startX - endX > 50) nextLightbox();
+});
+</script> -->
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body {
+    background: #0b1f2e;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #31c8ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #c8d8e5;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.cv-btn {
+    background: #ff007c;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    gap: 60px;
+}
+
+.img-box img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 6px solid #31c8ff;
+    box-shadow: 0 0 40px #31c8ff;
+}
+
+.small {
+    opacity: 0.8;
+    font-size: 18px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+.hero-text h3 {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.hero-text h3 span {
+    color: #31c8ff;
+}
+
+.desc {
+    width: 350px;
+    margin: 15px 0;
+    color: #b9c9d8;
+}
+
+.social a {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+.btn-group {
+    margin-top: 20px;
+}
+
+.hire-btn {
+    background: #31c8ff;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    border: 1px solid #31c8ff;
+    color: #31c8ff;
+    margin-left: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 60px 0;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-box h2 {
+    font-size: 32px;
+    color: #31c8ff;
+}
+
+.stat-box p {
+    color: #b9c9d8;
+}

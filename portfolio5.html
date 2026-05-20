@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styleportfolio.css">
+</head>
+
+<style>
+
+/* Contact Section */
+.contact-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color:  #31c8ff;;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* CONTACT INFO BOX */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    color: black;
+}
+
+/* NEW BOX STYLE FOR ITEMS */
+.info-box {
+    background: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #4b59f7;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.contact-info a {
+    color: #4b59f7;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    color: black;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    color: black;
+}
+
+.contact-form button {
+    background-color: #4b59f7;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #3a47c4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+        /* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e2f;
+    color: #fff;
+}
+
+</style>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">Port<span>Folio</span></div>
+
+        <ul class="nav-links">
+            <li><a href="portfolio1.html">Home</a></li>
+            <li><a href="portfolio22.html">About</a></li>
+            <li><a href="portfolio3.html">Skills</a></li>
+            <li><a href="portfolio4.html">Portfolio</a></li>
+            <li><a href="portfolio5.html">Contact</a></li>
+        </ul>
+
+        <a href="FATIMA JAMIL CV.pdf" class="cv-btn" download>
+            Download CV
+        </a>
+
+    </nav>
+</header>
+
+<section class="contact-section">
+
+    <h1>Contact Me</h1>
+    <p>If you have any project or idea, feel free to contact me.</p>
+
+    <div class="contact-container">
+
+        <!-- GET IN TOUCH BOX -->
+        <div class="contact-info">
+
+            <h2>Get in Touch</h2>
+
+            <div class="info-box">
+                📧 Email:
+                <a href="mailto:realfatimaofficial123@gmail.com">
+                    realfatimaofficial123@gmail.com
+                </a>
+            </div>
+
+            <div class="info-box">
+                📱 Phone:
+                <a href="tel:+923447199531">
+                    +92 3447199531
+                </a>
+            </div>
+
+            <div class="info-box">
+                📍 Location: Pakistan
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+        <form class="contact-form">
+            <h2>Send a Message</h2>
+
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
+
+</section>
+<footer>
+    <p>&copy; 2025 Fatima Jamil. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
